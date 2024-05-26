@@ -11,7 +11,7 @@ $select_query_result = mysqli_query($con, $select_query) or die(mysqli_error($co
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SoyToy World</title>
+    <title>Smart Selects</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
@@ -24,7 +24,7 @@ $select_query_result = mysqli_query($con, $select_query) or die(mysqli_error($co
         <?php require 'header.php'; ?>
         <div class="container">
             <div class="jumbotron">
-                <h1 style>Welcome to our SoyToy World!</h1>
+                <h1 style>Welcome to our Smart Selects!</h1>
                 <p>We have the best cameras, watches, and shirts for you. No need to hunt around, we have all in one place.</p>
             </div>
         </div>

@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>SoyToy World</title>
+        <title>Smart Selects</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- latest compiled and minified CSS -->
@@ -39,7 +39,7 @@
             <footer class="footer">
     <div class="container">
         <div class="text-center">
-            <p>&copy; 2024 SoyToy World. All Rights Reserved.</p>
+            <p>&copy; 2024 Smart Selects. All Rights Reserved.</p>
             <p>This website is developed by Tanmay.</p>
         </div>
     </div>

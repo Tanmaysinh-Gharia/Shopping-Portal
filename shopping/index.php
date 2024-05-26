@@ -5,7 +5,7 @@ session_start();
 <html>
     <head>
         <!-- <link rel="shortcut icon" href="img/lifestyleStore.png" /> -->
-        <title>SoyToy World</title>
+        <title>Smart Selects</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
@@ -76,7 +76,7 @@ session_start();
             <footer class="footer">
     <div class="container">
         <div class="text-center">
-            <p>&copy; 2024 SoyToy World. All Rights Reserved.</p>
+            <p>&copy; 2024 Smart Selects. All Rights Reserved.</p>
             <p>This website is developed by Tanmay.</p>
         </div>
     </div>

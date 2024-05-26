@@ -1,6 +1,11 @@
 <?php
     require 'connection.php';
     session_start();
+    if ($_SESSION["captcha_code"] != $_POST["captcha_code"])
+    {
+        header("location: login.php"); 
+        $_SESSION["captcha_inv"] = true;
+    }
     $email=mysqli_real_escape_string($con,$_POST['email']);
     $regex_email="/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[_a-z0-9-]+)*(\.[a-z]{2,3})$/";
     if(!preg_match($regex_email,$email)){

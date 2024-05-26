@@ -7,7 +7,7 @@
                            <span class="icon-bar"></span>
                        </button> -->
                        
-                       <a href="index.php" class="navbar-brand" style="font-size: 25px;margin-left:10px;margin-top:-10px; display:flex;"  ><img src="img/soytoy_logo.png" alt="logo" style="height:40px; width:40px;margin:-10px 30px 0 0; " > SoyToy World</a>
+                       <a href="index.php" class="navbar-brand" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;color:azure;font-size: 25px;margin-left:10px;margin-top:-10px; display:flex;"  ><img src="img/soytoy_logo.png" alt="logo" style="height:40px; width:40px;margin:-10px 30px 0 0; " > Smart Selects</a>
                    </div>
                    
                    <div class="collapse navbar-collapse" id="myNavbar">
