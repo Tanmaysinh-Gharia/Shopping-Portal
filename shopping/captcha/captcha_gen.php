@@ -5,8 +5,8 @@ $random_alpha = md5(rand()); //generation of random string
 
 /** Genrate a captcha of length 6 */
 $captcha_code = substr($random_alpha, 0, 6);
-$captcha_code = strtoupper($captcha_code);
 $_SESSION["captcha_code"] = $captcha_code;
+$captcha_code = strtoupper($captcha_code);
 
 /* Width and Height of captcha */
 $img = imagecreatetruecolor(170,50);

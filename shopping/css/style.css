@@ -1,5 +1,5 @@
 .navbar{
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
 /* body{
     font
@@ -25,13 +25,13 @@
   font-size: 24px;
   font-weight: 700;
 } 
-/* #thumbnail:hover {
+#thumbnail:hover {
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-  } */
-label{
+  }
+/* label{
     font-size: 15px;
 
-}
+} */
 #bannerContent{
     position:relative;
     padding-top:6%;

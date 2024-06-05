@@ -10,7 +10,7 @@ $user_id = $_SESSION['id'];
 $user_products_query = "SELECT it.id, it.name, it.price, ut.quantity 
                         FROM users_items ut 
                         INNER JOIN items it ON it.id = ut.item_id 
-                        WHERE ut.user_id='$user_id' and ut.status='Added to cart'";
+                        WHERE ut.user_id='$user_id';";
 $user_products_result = mysqli_query($con, $user_products_query) or die(mysqli_error($con));
 $no_of_user_products = mysqli_num_rows($user_products_result);
 $sum = 0;
@@ -62,6 +62,8 @@ if ($no_of_user_products == 0) {
             <?php
             $user_products_result = mysqli_query($con, $user_products_query) or die(mysqli_error($con));
             $counter = 1;
+            $item_ids= "";
+            $qtys = "";
             while ($row = mysqli_fetch_array($user_products_result)) {
                 ?>
                 <tr>
@@ -79,6 +81,8 @@ if ($no_of_user_products == 0) {
                     <td><a href='cart_remove.php?id=<?php echo $row['id']; ?>'>Remove</a></td>
                 </tr>
                 <?php
+                $item_ids .= ($row['id']." ");
+                $qtys .= ($row['quantity']." ");
                 $counter++;
             }
             ?>
@@ -88,7 +92,15 @@ if ($no_of_user_products == 0) {
                 <td></td>
                 <td></td>
                 <td>Rs <?php echo $sum; ?>/-</td>
-                <td><a href="success.php?id=<?php echo $user_id; ?>" class="btn btn-primary">Confirm Order</a></td>
+                <td><a href="success.php
+                <?php 
+                $_SESSION['item_ids'] = $item_ids;
+                $_SESSION['qtys'] = $qtys; 
+                $_SESSION['']
+                ?>" 
+                class="btn btn-primary">
+                Confirm Order</a>
+                </td>
             </tr>
             </tbody>
         </table>

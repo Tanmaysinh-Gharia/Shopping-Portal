@@ -3,7 +3,7 @@ session_start();
 require '../connection.php';
 
 // Check if user is not logged in
-if (!isset($_SESSION['admin_email'])) {
+if (!isset($_SESSION['email'])) {
     // header('location: admin_login.php');
     exit; // Stop further execution
 }

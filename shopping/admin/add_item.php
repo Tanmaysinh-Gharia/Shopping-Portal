@@ -2,7 +2,7 @@
 session_start();
 require '../connection.php';
 
-if (!isset($_SESSION['admin_email'])) {
+if (!isset($_SESSION['email'])) {
     exit; 
 }
 

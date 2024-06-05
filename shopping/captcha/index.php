@@ -4,7 +4,6 @@ session_start();
 
     
     if(isset($_POST["captcha_code"])){
-        
         if($_POST["captcha_code"] === $_SESSION["captcha_code"]){
              $message ='<p class="text-success" id="msg">Message Submitted Successfully</p>';
         }
@@ -93,8 +92,10 @@ session_start();
                 </div>
             </table>    
           </form>
+          <?php echo $message;?>  
           <p id="show" style="text-align:center;"><?php  if(isset($message)){
               echo $message;
+
               }session_unset();?></p>
             </div>
         <script>

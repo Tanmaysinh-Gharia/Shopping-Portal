@@ -137,3 +137,48 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+CREATE TABLE orders (
+    'order_id' INT(11) NOT NULL AUTO_INCREMENT,
+    'order_date' DATE NOT NULL,
+    'ord_status' TINYINT(1) NOT NULL CHECK ('ord_status' BETWEEN 1 AND 5),
+    'user_id' INT(11) NOT NULL,
+    'vend_id' INT(11) NOT NULL,
+    'sm_id' INT(11) NOT NULL,
+    'Amount' DECIMAL(10, 2) NOT NULL,
+    'itm_ids' VARCHAR(200),
+    PRIMARY KEY ('order_id')
+);
+
+
+CREATE TABLE sm_to_del_entry
+(
+  entry_id INT(11) NOT NULL AUTO_INCREMENT,
+  sm_id INT(11) NOT NULL;
+  del_id INT(11) NOT NULL;
+  date_reg DATE NOT NULL,
+  order_id INT(11) NOT NULL;
+);
+
+CREATE table ord_shipping
+(
+  ship_id INT(11) Not Null AUTO_INCREMENT,
+  vend_id int(11) Not NULL,
+  sm_id int(11) not NULL,
+  ord_cond TINYINT(1) Not Null check(ord_cond BETWEEN 0 and 1)
+);
+
+-- CREATE TABLE delivery
+-- (
+--   del_id INT(11) NOT NULL AUTO_INCREMENT,
+--   numb INT(10) NOT NULL,
+--   name VARCHAR(25)
+-- );
+
+-- CREATE table Shipping_Manager
+-- (
+--   sm_id Int(11) Not NULL AUTO_INCREMENT,
+--   numb INT(10) NOT NULL,
+--   name VARCHAR(25),
+--   pin_code Int(6)
+-- );

@@ -1,0 +1,26 @@
+[33mcommit a94bc606b28bb00a4bcfb0b5c749c46f650b9c71[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Tanmaysinh_Gharia <tanm280604@gmail.com>
+Date:   Sun May 26 10:27:07 2024 +0530
+
+    In version captcha was implemented suing image geration method.
+
+[33mcommit 96dd1281f59eb2d6f2c67997b080a7b6e9aa8a4[m
+Author: Tanmaysinh_Gharia <tanm280604@gmail.com>
+Date:   Fri May 24 16:02:26 2024 +0530
+
+    Removing Unnecessary files.
+
+[33mcommit af7b2d73a6fcbf425e9d50a1a2011eef32789aa7[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Tanmaysinh_Gharia <tanm280604@gmail.com>
+Date:   Thu May 23 23:18:52 2024 +0530
+
+    In this version
+    Pannels: User, Admin
+    Some minor modifications.
+    Need to improve in the login section by captcha.
+
+[33mcommit 785ce83f9b22a80adf70bffc7bc4181db1486f1d[m
+Author: Tanmaysinh_Gharia <tanm280604@gmail.com>
+Date:   Thu May 23 23:14:46 2024 +0530
+
+    This is to ensure, the 1st commit.

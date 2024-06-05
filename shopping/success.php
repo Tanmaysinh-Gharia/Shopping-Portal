@@ -4,8 +4,34 @@
     if(!isset($_SESSION['email'])){
         header('location:index.php');
     }else{
-        $user_id=$_GET['id'];
-        $confirm_query="update users_items set status='Confirmed' where user_id=$user_id";
+        $uid=$_SESSION['id'];
+
+        $qry_all_sm_pins = "SELECT id,pincode FROM users WHERE type=3 and status=1;";
+        $qry_cust_pin = "SELECT pincode FROM users WHERE id=$uid;";
+
+        $res_user_pin = mysqli_query($con,$qry_cust_pin);
+        $cust_pin_assoc = mysqli_fetch_assoc($res_all_pins);
+
+        $first_three_cust = (int)($cust_pin_assoc['pincode']/1000);
+
+        $res_all_pins = mysqli_query($con,$qry_all_sm_pins);
+        $sm_id = 0;
+        $found = false;
+        while($pin = mysqli_fetch_assoc($res_all_pins))
+        {
+            $first_three_sm = (int)($pin['pincode']/1000);
+            if($first_three_cust == $first_three_sm)
+            {
+                $sm_id= $pin['id'];
+                $found = true;
+                break;
+            }
+        }
+        if($found and $sm_id != 0)
+        {
+            $qry_place_ord= "INSERT INTO orders(order_date,ord_status,user_id,sm_id,amount,itm_ids) 
+            VALUES(CURDATE(),1,$uid,$sm_id,);";
+        }
         $confirm_query_result=mysqli_query($con,$confirm_query) or die(mysqli_error($con));   
     }
 ?>
