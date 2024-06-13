@@ -1,18 +1,15 @@
+
 <head>
-    <title>Shipping Manager Dashboard</title>
+    <title>Delivery Agent Dashboard</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="styles.css" type="text/css">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header ">
-                <a class="navbar-brand mx-auto" href="ship_man_dashboard.php"
-                    style="font-size:25px;color: white;margin-left:650px; margin-bottom:20px">Welcome, Shipping
-                    Manager!<br>
+                <a class="navbar-brand mx-auto" href="delivery_dashboard.php"
+                    style="font-size:25px;color: white;margin-left:770px; margin-bottom:20px"><b>Welcome, Agent !</b><br>
                     <h4>Let's go on Dashboard</h4>
                 </a>
             </div>

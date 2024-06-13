@@ -16,9 +16,9 @@ if (!isset($_SESSION['email'])) {
 <!DOCTYPE html>
 <html>
     <script>
-    function copyText() {
-        const outputElement = document.getElementById('output');
-        const textToCopy = outputElement.innerText;
+    function copyText(element) {
+        const outputElement = element;
+        const textToCopy = outputElement.value;
     
         // Create a temporary textarea element
         const tempTextarea = document.createElement('textarea');
@@ -54,7 +54,8 @@ if (!isset($_SESSION['email'])) {
         <?php 
         $numb =mysqli_num_rows($res_select_all_items); 
         if($numb <= 0): ?>
-            <div class="container"><h3 style="color:red; text-align:center"> No Items Present corrosponding to your vend_id !...</h3></div>
+            <div class="container"><h3 style="color:red; text-align:center"> 
+            No Items Present corrosponding to your vend_id !...</h3></div>
         <?php else: { ?>
             <div class="container">
                 <center>
@@ -77,15 +78,15 @@ if (!isset($_SESSION['email'])) {
                         <h3 >Item Name: <?php echo $row['name']; ?></h3>
                         <h3 style="display: inline-block;"> Item_ID:<a id ='output' ><?php echo $row['id']; ?></a><button
                                 style="display: inline-block; margin-left:20px" class="btn btn-primary"
-                                onclick="copyText()">Copy_ID</button></h3>
+                                onclick="copyText(this)" value="<?php echo $row['id']; ?>">Copy_ID</button></h3>
                         <h4>Price: Rs.<b> <?php echo $row['price']; ?>/-</b></h4>                                   
                     <h4>Stock(units): <b> <?php echo $row['stock']; ?></b></h4><br>
                     </div>
                 </div>
             </div>
+        <?php }}?>
         </div>
     </div>
-    <?php }}?>
     <?php endif; ?>
 
 

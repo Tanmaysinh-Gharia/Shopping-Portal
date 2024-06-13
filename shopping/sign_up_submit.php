@@ -10,7 +10,6 @@ session_start();
         $_SESSION['notify'] = "Captcha Invalid";
     }   
     $email = $_POST['email'];
-    $_SESSION["email"] = $email;
 
     // // echo $email . "and ". $password_admin;
     $type_o_user = $_POST['type_o_user'];

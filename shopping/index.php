@@ -4,7 +4,6 @@ session_start();
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- <link rel="shortcut icon" href="img/lifestyleStore.png" /> -->
         <title>Smart Selects</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,7 +51,7 @@ session_start();
                            <center>
                                 <div class="caption">
                                     <p id="autoResize">Watches</p>
-                                    <p>Original watches from the best brands.</p>
+                                    <p>Watches from the best brands.</p>
                                 </div>
                            </center>
                        </div>

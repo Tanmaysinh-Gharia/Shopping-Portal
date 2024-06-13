@@ -1,11 +1,11 @@
 <?php
 session_start();
 require 'connection.php';
-
+require 'func/funcstions.php';
 if (!isset($_SESSION['email'])) {
     header('location: login.php');
 }
-
+check_notifications();
 $user_id = $_SESSION['id'];
 $user_products_query = "SELECT it.id, it.name, it.price, ut.quantity 
                         FROM users_items ut 
@@ -63,8 +63,10 @@ if ($no_of_user_products == 0) {
             $user_products_result = mysqli_query($con, $user_products_query) or die(mysqli_error($con));
             $counter = 1;
             $item_ids= "";
+            $vend_ids= "";
             $qtys = "";
             while ($row = mysqli_fetch_array($user_products_result)) {
+                $curr_id = $row['id'];
                 ?>
                 <tr>
                     <td><?php echo $counter; ?></td>
@@ -72,17 +74,15 @@ if ($no_of_user_products == 0) {
                     <td><?php echo $row['price']; ?></td>
                     <td>
                         <form action="update_quantity.php" method="POST">
-                            <input type="hidden" name="item_id" value="<?php echo $row['id']; ?>">
+                            <input type="hidden" name="item_id" value="<?php echo $curr_id; ?>">
                             <input type="number" name="quantity" value="<?php echo $row['quantity']; ?>" min="1">
                             <button type="submit" class="btn btn-primary">Update</button>
                         </form>
                     </td>
                     <td><?php echo $row['price'] * $row['quantity']; ?></td>
-                    <td><a href='cart_remove.php?id=<?php echo $row['id']; ?>'>Remove</a></td>
+                    <td><a href='cart_remove.php?id=<?php echo $curr_id; ?>'>Remove</a></td>
                 </tr>
                 <?php
-                $item_ids .= ($row['id']." ");
-                $qtys .= ($row['quantity']." ");
                 $counter++;
             }
             ?>
@@ -92,14 +92,9 @@ if ($no_of_user_products == 0) {
                 <td></td>
                 <td></td>
                 <td>Rs <?php echo $sum; ?>/-</td>
-                <td><a href="success.php
-                <?php 
-                $_SESSION['item_ids'] = $item_ids;
-                $_SESSION['qtys'] = $qtys; 
-                $_SESSION['']
-                ?>" 
-                class="btn btn-primary">
-                Confirm Order</a>
+                <td><a href="success.php" class="btn btn-success">
+                <b>
+                Confirm Order</b></a>
                 </td>
             </tr>
             </tbody>

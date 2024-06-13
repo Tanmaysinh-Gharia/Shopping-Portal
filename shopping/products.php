@@ -2,17 +2,20 @@
 session_start();
 require 'check_if_added.php';
 require 'connection.php'; // Include your database connection file
+require 'func/funcstions.php';
 
 // Fetch products from the database
 $select_query = "SELECT * FROM items";
 $select_query_result = mysqli_query($con, $select_query) or die(mysqli_error($con));
 $i = -1;
-
+check_notifications();
 //Needed Prefix for below query
 $qry_for_vendor_name = "select * from users where id=";
 
 //Order_status
-$_SESSION['ord_status_map'] = [1=>"Order Placed",2=>"Vendor Accepted",3=>"Dispatched by Vendor",4=> "Shipped",5=>"Out For Delivery",6=>"Delivered",-2=>"Damadged"];
+$_SESSION['ord_status_map'] = [1=>"Order Placed",2=>"Vendor Accepted",3=>"Dispatched by Vendor",
+4=> "Shipped",5=>"Ready To Deliver",6=>"Delivery Failed",7=>"Delivered",-4=>"Damadged",-2=>"Vendor Rejected",
+-6=>"Won't Deliver, Remain At Shipping Office !"];
 ?>
 
 <!DOCTYPE html>

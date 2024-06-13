@@ -11,7 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['item_id']) && isset($
     $new_quantity = $_POST['quantity'];
 
     // Update the quantity for the item in the users_items table
-    $update_query = "UPDATE users_items SET quantity = $new_quantity WHERE item_id = $item_id";
+    $user_id = $_SESSION['id'];
+    $update_query = "UPDATE users_items SET quantity = $new_quantity WHERE item_id = $item_id and user_id=$user_id";
     mysqli_query($con, $update_query) or die(mysqli_error($con));
 
     header('location: cart.php'); // Redirect back to the cart page

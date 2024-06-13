@@ -66,7 +66,7 @@ function disp_apr($res_view)
                     <th scope='col 1'>#</th>
                     <th scope="col 6">Identification</th>
                     <th scope="col 4">Address</th>
-                    <th scope="col 2">Approval</th>
+                    <th style="width: 20%;">Approval</th>
                 </tr>
             </thead>
             <tbody id='disp_apr_body'>
@@ -84,6 +84,3 @@ function disp_apr($res_view)
 
 </html>
 
-<?php
-    
-?>

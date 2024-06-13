@@ -48,12 +48,16 @@ session_start();
                     header('location: ship_man/ship_man_dashboard.php');
                     break;
                 case 5:
+                    //Admin
                     header('location: admin/admin_dashboard.php');
                     break;    
-    
-                    default:
-                        header('location: login.php');
+                case 4:
+                    //Delivery Agent
+                    header("location: delivery/delivery_dashboard.php");
                     break;
+                default:
+                    header('location: login.php');
+                break;
             }
         }
         else{

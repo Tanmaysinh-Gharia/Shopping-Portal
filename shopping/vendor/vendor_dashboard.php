@@ -28,18 +28,23 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         <h2>Vendor Dashboard</h2>
         <h3>Welcome,<br>Dear Vendor!</h3>
     </div>
-    <?php 
-        $qry = "select * from orders where ord_status=1 and vend_id = $vend_id;";
-        $res = mysqli_query($con,$qry);
-        $orders = mysqli_num_rows($res);
-?>
     <form method="post" action="<?php echo $_SERVER["PHP_SELF"]?>">
+        <div class="container" style="inline-size: 50%; ">
+            <button type="submit" class="btn btn-danger btn-lg btn-block" name="opt" value="9">
+                <h3>Damaged Items to <br>Redeliver</h3>
+            </button>
+        </div>
         <div class="container" style="inline-size: 50%; ">
             <button type="submit" class="btn btn-danger btn-lg btn-block" 
             style="background-color:purple;" name="opt"
-                value="1" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
-                <h3>Order to Deliver</h3>
-                <span class="badge badge-light" style="font-size: 20px;"><?php echo $orders ?></span>
+            value="7" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+            <h3>Accept the Orders</h3>
+            </button>
+            </div>
+        <div class="container" style="inline-size: 50%; opacity:1 ">
+            <button type="submit" class="btn btn-success btn-lg btn-block" name="opt" value="8">
+                <h3>Dispatch Orders</h3>
+                <h4>To Shipping Manager</h4>
             </button>
         </div>
         <div class="container" style="inline-size: 50%; ">
@@ -98,6 +103,15 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                 break;
             case 6:
                 header("location: vendor_mod_item.php");
+                break;
+            case 7:
+                header("location: vendor_accept.php");
+                break;
+            case 8:
+                header("location: vendor_dispatch.php");
+                break;
+            case 9:
+                header("location: vendor_damaged.php");
                 break;
             default:    
                 header("location: vendor_dashboard.php");
