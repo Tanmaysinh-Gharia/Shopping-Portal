@@ -7,6 +7,12 @@
         // $_SESSION["captcha_inv"] = false;
     $_SESSION['types'] = [1=>"Customer",2=>"Vendor",3=>"Shipping Manager" , 4=>"Delivery Agent", 5=>"Admin"];
     check_notifications();
+
+    
+//Order_status
+$_SESSION['ord_status_map'] = [1=>"Order Placed",2=>"Vendor Accepted",3=>"Dispatched by Vendor",
+4=> "Shipped",5=>"Ready To Deliver",6=>"Delivery Failed",7=>"Delivered",-4=>"Damadged",-2=>"Vendor Rejected",
+-6=>"Won't Deliver, Remain At Shipping Office !"];
 ?>  
 <!DOCTYPE html>
 <html>

@@ -12,10 +12,6 @@ check_notifications();
 //Needed Prefix for below query
 $qry_for_vendor_name = "select * from users where id=";
 
-//Order_status
-$_SESSION['ord_status_map'] = [1=>"Order Placed",2=>"Vendor Accepted",3=>"Dispatched by Vendor",
-4=> "Shipped",5=>"Ready To Deliver",6=>"Delivery Failed",7=>"Delivered",-4=>"Damadged",-2=>"Vendor Rejected",
--6=>"Won't Deliver, Remain At Shipping Office !"];
 ?>
 
 <!DOCTYPE html>

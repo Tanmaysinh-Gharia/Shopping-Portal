@@ -24,7 +24,7 @@ function disp_assigns($con,$lots_map)
     $i = 1;
     $sm_id = $_SESSION['id'];
 
-    $qry_sel_order = "  SELECT oi.item_id,o.order_id,u.pincode
+    $qry_sel_order = "SELECT oi.item_id,o.order_id,u.pincode
                         FROM order_items oi
                         INNER JOIN orders o ON oi.order_id=o.order_id 
                         INNER JOIN users u ON u.id = o.user_id

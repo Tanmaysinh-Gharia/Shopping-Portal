@@ -146,3 +146,14 @@ form input[type="submit"]:hover {
     transform: translate(0px,-6px);
     box-shadow: 2px 5px 25px 0 rgba(0, 0, 0, .2);
 }
+.g{
+    font-size: 20px;
+    background-color: rgb(222, 247, 255);
+}
+.col-left {
+    border-right: 2px solid #000; /* Vertical line */
+}
+
+.col-right {
+    padding-left: 20px; /* Additional padding to account for the border */
+}

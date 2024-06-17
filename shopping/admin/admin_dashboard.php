@@ -31,26 +31,26 @@ $activePage =  $currentPage;
                     </button>
                 </div>
                 <div class="col-md-6">
-                    <button type="submit" class="btn btn-info btn-lg btn-block" style="background-color:turquoise;"
+                    <button type="submit" class="btn btn-info btn-lg btn-block" style="background-color:purple;"
                     name="opt" value="2" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
                     <h3><b>Trace an Order</b></h3></button>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12" style="width:100%">
                     <button type="submit" class="btn btn-success btn-lg btn-block" name="opt" value="3">
                         <h3><b>Approvals</b></h3>
                         <h4>Vendor/ Delivery agent/ Shipping Manager</h4>
                     </button>
                 </div>
-                <div class="col-md-6">
+                <!-- <div class="col-md-6">
                     <button type="submit" class="btn btn-danger btn-lg btn-block" style="background-color:purple;"
                         name="opt" value="4" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
                             
                     <h3><b>Analysis of Portal</b></h3>
                     <h4>( Statistics )</h4>
                     </button>
-                </div>
+                </div> -->
             </div>
         </div>
     </form>

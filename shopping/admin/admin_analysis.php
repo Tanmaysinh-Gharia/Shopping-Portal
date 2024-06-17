@@ -1,15 +1,11 @@
 <?php
 session_start();
 require '../connection.php';
-require 'vendor_header.php';
+require 'admin_header.php';
 
 if (!isset($_SESSION['email'])) {
     exit; 
 }
-$vend_id = $_SESSION['id'];
-$currentPage = basename($_SERVER['PHP_SELF']);
-
-
 ?>
 
 <!DOCTYPE html>
