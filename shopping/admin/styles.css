@@ -21,6 +21,12 @@ body, html {
     padding: 50px;
     font-size: 40px;
 }
+.btn{
+    height:100px;
+}
+.row{
+    padding-bottom: 15px;
+}
 
 .header h1 {
     margin: 0;
@@ -75,7 +81,7 @@ th {
 
 /* Form styles */
 form {
-    width: 50%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -109,4 +115,34 @@ form input[type="submit"]:hover {
 .navbar-nav > li > a {
     padding-top: 15px;
     padding-bottom: 15px;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8rem;
+    z-index: 1000;
+}
+.dummy_header{
+    height: 5rem;
+    width: 100%;
+    margin: 3rem 0 0 0 ;
+}
+
+.thumbnail{
+    border-radius: 10px;
+    border: 1px solid #868484;
+    transition: 0.1s;
+    transform: rotate(0deg);
+}
+.jumbotron{
+    background-color: #dcdadae3;
+}
+.thumbnail:hover{
+    transition: 0.5s;
+    background-color: #eef4f9;
+    transform: translate(0px,-6px);
+    box-shadow: 2px 5px 25px 0 rgba(0, 0, 0, .2);
 }

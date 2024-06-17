@@ -39,8 +39,6 @@ $ttf_used = 'You are the one.ttf';
 imagettftext($img, $font_size, 0, 25, 35, $captcha_text_color, $ttf_used, $captcha_code);
 header("Content-type: image/jpeg");
 
-
 imagejpeg($img);             
 // imagedestroy($img);
-
 ?>

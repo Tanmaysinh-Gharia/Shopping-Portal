@@ -21,8 +21,10 @@
     <body>
         <div>
             <?php
-                require 'header.php';
-            ?>
+            require 'header.php';
+           ?><div class="dummy_header">
+           </div>
+            
             <br>
             <div class="container">
                 <div class="row">

@@ -9,11 +9,8 @@ switch ($_POST['opt']) {
     case '3':
         header("location: admin_approvals_rdr.php");
         break;
-    case '1':
-        header("location: options/add_rm_vend.php");
-        break;
-    case '1':
-        header("location: options/add_rm_vend.php");
+    case '4':
+        header("location: options/admin_analysis.php");
         break;
     default:
         break;

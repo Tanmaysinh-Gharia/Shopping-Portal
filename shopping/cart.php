@@ -49,7 +49,7 @@ if ($no_of_user_products == 0) {
     <?php require 'header.php'; ?>
     <br>
     <div class="container">
-        <table class="table table-bordered table-striped">
+        <table class="table table-bordered table-striped" style="font-size: 18px;">
             <tbody>
             <tr>
                 <th>Item Number</th>

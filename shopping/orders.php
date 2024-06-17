@@ -26,9 +26,10 @@ check_notifications();
 <body>
     <div>
         <?php require 'header.php'; ?>
+        
         <div class="container filledcont">
-            <h2>Orders</h2>
-            <p>List of Your Orders</p>
+            <h2><b>List of Your Orders</b></h2>
+            <p></p>
         </div>
 
         <div class="container filledcont">
@@ -51,7 +52,7 @@ check_notifications();
             //Order Id Display
             echo "<thead class='thead-dark'>
                         <tr class='trm'>
-                            <th class='thm'  style='width: 20%'>Order_No: $order_idx</th>
+                            <th class='thm'  style='width: 20%;background-color:rgb(0, 142, 171);'>Order_No: $order_idx</th>
                             <th  class='thm' style='width: 40%'>Order_ID: $order_id</th>
                             <th  class='thm' style='width: 50%'>Date(YYYY-MM-DD): $order_date</th>
                         </tr >
@@ -99,9 +100,9 @@ check_notifications();
                 $item_idx++;
             }
             $order_idx++;
-        echo "<thead class='thead-dark'>
-                        <tr class='trm'>
-                            <th class='thm'  style='width: 100%'></th>
+        echo "<thead>
+                        <tr >
+                            <th class='blnk'  style='width: 100%'></th>
                         </tr >
                     </thead>";
         }
@@ -117,7 +118,7 @@ check_notifications();
         <?php else: { ?>
         <div class="container filledcont">
             <center>
-                <h2>Displaying All The [<?php echo $numb ?>] Orders</h2>
+                <h2>Displaying All The (<?php echo $numb ?>) Orders</h2>
             </center>
         </div>
         <div class="container filledcont">

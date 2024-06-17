@@ -62,6 +62,9 @@ if (!isset($_SESSION['email'])) {
                     <h2>Displaying All The [<?php echo $numb ?>]  Items</h2>
                 </center>
             </div>
+            <div class="dummy_header" >
+
+            </div>
         <div class="row">
             <?php while($row =mysqli_fetch_assoc($res_select_all_items) )
                     { ?>
@@ -69,15 +72,15 @@ if (!isset($_SESSION['email'])) {
 
                 <div class="thumbnail">
                     <?php if(!empty($row['image'])): ?>
-                    <img src="<?php echo "../".$row['image'];?>" alt="<?php echo $row['name']; ?>">
+                    <img src="<?php echo "../".$row['image'];?>" alt="<?php echo $row['name']; ?>" style="height:250px;widht:250px;">
                     <?php else: ?>
                     <p>No image available</p>
                     <?php endif; ?>
 
                     <div class="caption">
                         <h3 >Item Name: <?php echo $row['name']; ?></h3>
-                        <h3 style="display: inline-block;"> Item_ID:<a id ='output' ><?php echo $row['id']; ?></a><button
-                                style="display: inline-block; margin-left:20px" class="btn btn-primary"
+                        <h3 style="display: inline-block;"> Item_ID: <a id ='output' ><?php echo $row['id']; ?></a><button
+                                style="display: inline-block; margin-left:20px;height:50px;" class="btn btn-primary" 
                                 onclick="copyText(this)" value="<?php echo $row['id']; ?>">Copy_ID</button></h3>
                         <h4>Price: Rs.<b> <?php echo $row['price']; ?>/-</b></h4>                                   
                     <h4>Stock(units): <b> <?php echo $row['stock']; ?></b></h4><br>

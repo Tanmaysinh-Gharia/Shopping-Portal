@@ -1,5 +1,5 @@
 <nav class="navbar navbar-inverse navabar-fixed-top">
-               <div style="padding-top:25px;padding-bottom:10px;margin-bottom:0px;">
+               <div style="padding-top:25px">
                    <div class="navbar-header" >
                        
                        <a href="index.php" class="navbar-brand" 
@@ -29,3 +29,5 @@
                    </div>
                </div>
 </nav>
+<div class="dummy_header">
+           </div>

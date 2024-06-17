@@ -20,6 +20,7 @@ $_SESSION['ord_status_map'] = [1=>"Order Placed",2=>"Vendor Accepted",3=>"Dispat
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Smart Selects</title>
     <meta charset="UTF-8">
@@ -29,6 +30,7 @@ $_SESSION['ord_status_map'] = [1=>"Order Placed",2=>"Vendor Accepted",3=>"Dispat
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
+
 <body>
     <div>
         <?php require 'header.php'; ?>
@@ -44,15 +46,16 @@ $_SESSION['ord_status_map'] = [1=>"Order Placed",2=>"Vendor Accepted",3=>"Dispat
                 while ($row = mysqli_fetch_assoc($select_query_result)) {
                     $i++;
                     if($i %4 == 0){?>
-                    <div class="row">
-                    <?php }?>
-                    
-                    <div class="col-md-3    col-sm-6">
-                        <div class="thumbnail">
-                            <?php if(!empty($row['image'])): ?>
-                                <img style="height: 250px;width: 100%;" src="<?php echo $row['image'];?>" alt="<?php echo $row['name']; ?>">
+            <div class="row">
+                <?php }?>
+
+                <div class="col-md-3    col-sm-6">
+                    <div class="thumbnail">
+                        <?php if(!empty($row['image'])): ?>
+                        <img style="height: 250px;width: 250px;" src="<?php echo $row['image'];?>"
+                            alt="<?php echo $row['name']; ?>">
                         <?php else: ?>
-                            <p>No image available</p>
+                        <p>No image available</p>
                         <?php endif; ?>
                         <div class="caption">
                             <h3><?php echo $row['name']; ?></h3>
@@ -62,22 +65,25 @@ $_SESSION['ord_status_map'] = [1=>"Order Placed",2=>"Vendor Accepted",3=>"Dispat
                             ?>
                             <p>Vendor: <?php echo $vend_name_arr['name']; ?></p>
                             <?php if(!isset($_SESSION['email'])): ?>
-                                <p><a href="login.php" role="button" class="btn btn-primary btn-block">Buy Now</a></p>
+                            <p><a href="login.php" role="button" class="btn btn-primary btn-block">Buy Now</a></p>
                             <?php else: ?>
-                                <?php if(check_if_added_to_cart($row['id'])): ?>
-                                    <a href="#" class="btn btn-block btn-success disabled">Added to cart</a>
-                                    <?php else: ?>
-                                        <a href="cart_add.php?id=<?php echo $row['id']; ?>" class="btn btn-block btn-primary">Add to cart</a>
-                                        <?php endif; ?>
-                                        <?php endif; ?>
-                                    </div>
-                                </div>
-                            </div>
-                            <?php } 
-                            if($i %4 == 0) echo "</div>";?>
-                            
+                            <?php if(check_if_added_to_cart($row['id'])): ?>
+                            <a href="#" class="btn btn-block btn-success disabled">Added to cart</a>
+                            <?php else: ?>
+                            <a href="cart_add.php?id=<?php echo $row['id']; ?>" class="btn btn-block btn-primary">Add to
+                                cart</a>
+                            <?php endif; ?>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
-            </body>
-            </html>
+                <?php } 
+                            if($i %4 == 0) echo "</div>";?>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
