@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project is a PHP-based shopping portal designed with two distinct panels: the User Panel and the Admin Panel. Additionally, it accommodates five types of users with specific functionalities tailored to each role: Admin, Vendor, Customer, Shipping Manager, and Delivery Agent. The portal ensures a smooth and secure shopping experience, with advanced functionalities such as captcha protection, item status tracking, and role-based access control.
+This PHP-based shopping portal offers a streamlined, secure shopping experience through two main panels: the User Panel and the Admin Panel. The system is designed to accommodate five types of users: Admin, Vendor, Customer, Shipping Manager, and Delivery Agent, each with distinct functionalities. The portal features advanced functionalities such as captcha protection, item status tracking, and role-based access control, ensuring a smooth and efficient experience for all users.
 
 ## Table of Contents
 
@@ -26,44 +26,43 @@ This project is a PHP-based shopping portal designed with two distinct panels: t
 
 ### User Panel
 
-- **Add items to the cart**: Users can browse and add items to their personal cart.
-- **Remove items from the cart**: Users can remove items from their cart as needed.
-- **Individual Single Carts**: Each user has a unique cart assigned to them.
-- **Persistent Cart**: Items added to the cart are saved, even if the user logs out and returns later.
-- **Modify Item Quantities**: Users can increase or decrease the quantity of items in their cart.
-- **Place Orders**: Users can place an order for the items in their cart.
-- **View Order History**: Users can view their past orders with detailed status updates for each item.
-- **Change Password**: Users can change their password after logging in.
+- **Add items to the cart**: Browse and add items to the cart.
+- **Remove items from the cart**: Remove items as needed.
+- **Persistent Individual Carts**: Items are saved in the cart even after logging out.
+- **Modify Item Quantities**: Adjust quantities of items in the cart.
+- **Place Orders**: Finalize purchases from the cart.
+- **View Order History**: Detailed status updates for past orders.
+- **Change Password**: Update password securely.
 
 ### Admin Panel
 
-- **Approve Accounts**: Admins can approve or reject applications for Vendor, Shipping Manager, and Delivery Agent accounts.
-- **Add Items**: Admins can add new items to the shopping portal, with or without images.
-- **View and Delete Orders**: Admins can view all orders placed by users and delete them if necessary.
-- **Remove Users**: Admins can remove users from the portal.
-- **Remove Items**: Admins can remove items from the shopping portal.
-- **Trace Orders**: Admins can trace orders by order ID and see detailed information about each item's status.
+- **Approve Accounts**: Approve or reject Vendor, Shipping Manager, and Delivery Agent applications.
+- **Add Items**: Add new items to the portal.
+- **Manage Orders**: View and delete orders.
+- **Remove Users**: Delete user accounts.
+- **Remove Items**: Delete items from the portal.
+- **Trace Orders**: Track orders by order ID.
 
 ### Vendor Panel
 
-- **Add Products**: Vendors can add products with details like name, price, image, category, and stock information.
-- **Manage Orders**: Vendors can accept or reject orders and update item statuses.
-- **Dispatch Items**: Vendors can dispatch items to the shipping office and update item statuses accordingly.
-- **View and Update Inventory**: Vendors can view their inventory, update stock, and modify item properties.
-- **Change Password**: Vendors can change their password after logging in.
+- **Add Products**: List new products with comprehensive details.
+- **Manage Orders**: Accept or reject orders and update statuses.
+- **Dispatch Items**: Send items to the shipping office.
+- **View and Update Inventory**: Manage stock and item details.
+- **Change Password**: Update password securely.
 
 ### Shipping Manager Panel
 
-- **Manage Shipping Entries**: Shipping Managers can update the condition of items and mark them as damaged if necessary.
-- **Assign Delivery Agents**: Shipping Managers can assign items to delivery agents based on clustered address orders.
-- **Track Items**: Shipping Managers can track items' arrival and dispatch status.
-- **Change Password**: Shipping Managers can change their password after logging in.
+- **Manage Shipping Entries**: Update item conditions and mark as damaged if necessary.
+- **Assign Delivery Agents**: Allocate items to delivery agents.
+- **Track Items**: Monitor item status during shipping.
+- **Change Password**: Update password securely.
 
 ### Delivery Agent Panel
 
-- **View Assigned Orders**: Delivery Agents can view their assigned orders for the day.
-- **Update Order Status**: Delivery Agents can update the status of orders to delivered, undelivered, or damaged.
-- **Change Password**: Delivery Agents can change their password after logging in.
+- **View Assigned Orders**: Check daily assigned orders.
+- **Update Order Status**: Mark orders as delivered, undelivered, or damaged.
+- **Change Password**: Update password securely.
 
 ## Installation
 
@@ -76,22 +75,22 @@ This project is a PHP-based shopping portal designed with two distinct panels: t
    cd shopping-portal
    ```
 3. **Set Up the Database**:
-   - Create a MySQL database for the project.
-   - Import the provided SQL file to set up the necessary tables:
+   - Create a MySQL database.
+   - Import the provided SQL file:
      ```sh
      mysql -u username -p database_name < database/store.sql
      ```
 4. **Configure the Project**:
    - Rename `config.example.php` to `config.php`.
-   - Update the database credentials and other configurations in `config.php`.
+   - Update database credentials and other configurations in `config.php`.
 
 5. **Start the Server**:
-   - Ensure your web server (Apache, Nginx, etc.) is configured to serve the project.
+   - Configure your web server (Apache, Nginx, etc.) to serve the project.
    - Access the project in your browser.
 
 ## Configuration
 
-The `config.php` file contains the configuration settings for the project. Make sure to update it with your database credentials and any other necessary settings.
+Update the `connection.php` file with your database credentials and other necessary settings.
 
 ```php
 <?php
@@ -108,39 +107,39 @@ define('DB_NAME', 'your_database');
 
 ### User Panel Usage
 
-1. **Login**: Enter user credentials on the login page to access the User Panel.
-2. **Shopping**: Browse items and add desired items to the cart.
-3. **Manage Cart**: Increase, decrease, or remove items from the cart as needed.
-4. **Place Order**: Once satisfied with the cart, place an order.
-5. **Account Settings**: Change your password through the account settings.
+1. **Login**: Use your credentials to access the User Panel.
+2. **Shopping**: Browse and add items to your cart.
+3. **Manage Cart**: Adjust quantities or remove items.
+4. **Place Order**: Confirm and place your order.
+5. **Account Settings**: Change your password if needed.
 
 ### Admin Panel Usage
 
-1. **Login**: Enter admin credentials on the login page to access the Admin Panel.
-2. **Manage Users and Orders**: Approve or reject applications, manage users, and trace orders.
-3. **Manage Items**: Add, update, or remove items from the shopping portal.
+1. **Login**: Use admin credentials to access the Admin Panel.
+2. **Manage Users and Orders**: Approve/reject applications, manage users, and trace orders.
+3. **Manage Items**: Add, update, or remove items from the portal.
 
 ### Vendor Panel Usage
 
-1. **Login**: Enter vendor credentials on the login page to access the Vendor Panel.
-2. **Manage Products**: Add, update, and delete products from the portal.
-3. **Manage Orders**: Accept or reject orders and update their status.
-4. **Dispatch Items**: Dispatch accepted items to the shipping office.
+1. **Login**: Use vendor credentials to access the Vendor Panel.
+2. **Manage Products**: Add, update, or delete products.
+3. **Manage Orders**: Accept/reject orders and update their status.
+4. **Dispatch Items**: Send items to the shipping office.
 
 ### Shipping Manager Panel Usage
 
-1. **Login**: Enter shipping manager credentials on the login page to access the Shipping Manager Panel.
-2. **Manage Shipments**: Update the condition of items and mark them as damaged if necessary.
-3. **Assign Delivery Agents**: Assign items to delivery agents and track the shipping process.
+1. **Login**: Use shipping manager credentials to access the Shipping Manager Panel.
+2. **Manage Shipments**: Update item conditions and manage shipments.
+3. **Assign Delivery Agents**: Allocate items to delivery agents.
 
 ### Delivery Agent Panel Usage
 
-1. **Login**: Enter delivery agent credentials on the login page to access the Delivery Agent Panel.
-2. **View and Deliver Orders**: View assigned orders and update their status upon delivery.
+1. **Login**: Use delivery agent credentials to access the Delivery Agent Panel.
+2. **View and Deliver Orders**: Check assigned orders and update their status.
 
 ## Contributing
 
-I welcome contributions from the community. If you'd like to contribute, please fork the repository and submit a pull request with your changes. Ensure your code follows the project's coding standards and includes appropriate tests.
+Contributions are welcome. Fork the repository and submit a pull request with your changes. Ensure your code follows the project's standards and includes appropriate tests.
 
 ---
 
