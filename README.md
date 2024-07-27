@@ -1,5 +1,9 @@
 # Shopping Portal Project
 
+## Checkout on this link:
+http://smartselects.infinityfreeapp.com/
+
+
 ## Introduction
 
 This PHP-based shopping portal offers a streamlined, secure shopping experience through two main panels: the User Panel and the Admin Panel. The system is designed to accommodate five types of users: Admin, Vendor, Customer, Shipping Manager, and Delivery Agent, each with distinct functionalities. The portal features advanced functionalities such as captcha protection, item status tracking, and role-based access control, ensuring a smooth and efficient experience for all users.
