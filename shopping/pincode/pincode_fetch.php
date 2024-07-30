@@ -1,5 +1,5 @@
 <?php
-$filename = "pincode/Pincode_30052019.csv";
+$filename = "https://raw.githubusercontent.com/Tanmaysinh-Gharia/Shopping-Portal/master/shopping/pincode/Pincode_30052019.csv";
 $st_ct_pin = [];
 // Open the file for reading
 if (($handle = fopen($filename, "r")) !== FALSE) {

@@ -40,5 +40,5 @@ imagettftext($img, $font_size, 0, 25, 35, $captcha_text_color, $ttf_used, $captc
 header("Content-type: image/jpeg");
 
 imagejpeg($img);             
-// imagedestroy($img);
+imagedestroy($img);
 ?>

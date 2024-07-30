@@ -3,7 +3,7 @@
                    <div class="navbar-header" >
                        
                        <a href="index.php" class="navbar-brand" 
-                       style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;color:azure;font-size: 25px;margin-left:10px;margin-top:-10px; display:flex;"  >
+                       style="color:azure;font-size: 28px;margin-left:10px;margin-top:-10px; display:flex;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"  >
                        <img src="img/smart_selects.png" alt="logo" style="height:40px; width:40px;margin:-10px 30px 0 0; " > 
                        Smart Selects</a>
                    </div>

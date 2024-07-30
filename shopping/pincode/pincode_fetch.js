@@ -1,6 +1,6 @@
 
 // URL of the CSV file and variable declaration
-const csvUrl = 'pincode/Pincode_30052019.csv';
+const csvUrl = 'https://raw.githubusercontent.com/Tanmaysinh-Gharia/Shopping-Portal/master/shopping/pincode/Pincode_30052019.csv';
 var lines2;
 
 // Function to fetch and convert CSV to JSON

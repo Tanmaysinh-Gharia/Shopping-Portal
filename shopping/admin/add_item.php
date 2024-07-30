@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = mysqli_real_escape_string($con, $_POST['name']);
     $price = mysqli_real_escape_string($con, $_POST['price']);
 
-    $target_dir = "C:/xampp/htdocs/Practicals/Innovative/shopping2/shopping/img/";
+    $target_dir = "../shopping/img/";
     $target_file = $target_dir . basename($_FILES["image"]["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));

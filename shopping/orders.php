@@ -50,19 +50,19 @@ check_notifications();
             $order_id = $row['order_id'];
             $order_date = $row['order_date'];
             //Order Id Display
-            echo "<thead class='thead-dark'>
+            echo "<thead class='thead'>
                         <tr class='trm'>
-                            <th class='thm'  style='width: 20%;background-color:rgb(0, 142, 171);'>Order_No: $order_idx</th>
+                            <th class='thm'  style='width: 20%;background-color:rgb(240, 191, 76);color:black;border:1px solid black'>Order_No: $order_idx</th>
                             <th  class='thm' style='width: 40%'>Order_ID: $order_id</th>
                             <th  class='thm' style='width: 50%'>Date(YYYY-MM-DD): $order_date</th>
                         </tr >
                     </thead>";
             
-            echo "<thead class='thead-dark'>
+            echo "<thead class='thead'>
                         <tr class='trm'>
                             <th  class='thm' style='width: 5%'>#</th>
                             <th  class='thm' style='width: 20%'>Item Name</th>
-                            <th  class='thm' style='width: 20%'>Unit Price * Qty</th>
+                            <th  class='thm' style='width: 20%'>Unit Price X Qty</th>
                             <th  class='thm' style='width: 15%'>Total</th>
                             <th  class='thm' style='width: 20%'>Vendor Name</th>
                             <th  class='thm' style='width: 20%'>Status</th>
@@ -92,10 +92,10 @@ check_notifications();
                 echo "<tr class='trm'>
                     <th  class='thm' style='width: 5%'>$item_idx</th>
                     <td class='tdm' style='width: 20%' >$item_name<td>
-                    <td class='tdm' style='width: 20%' >$unit_price * $qty<td>
-                    <td class='tdm' style='width: 15%' >$total<td>
+                    <td class='tdm' style='width: 20%' >₹ $unit_price <b>X</b> $qty<td>
+                    <td class='tdm' style='width: 15%' >₹ $total<td>
                     <td class='tdm' style='width: 20%' >$vend_name<td>
-                    <td class='tdm' style='width: 20%' >$status<td>
+                    <td class='tdm' style='width: 20%' ><b>$status</b><td>
                 </tr >";
                 $item_idx++;
             }
@@ -116,13 +116,15 @@ check_notifications();
             </div>
             
         <?php else: { ?>
-        <div class="container filledcont">
+        <div class="container filledcont" style="width:90%">
             <center>
                 <h2>Displaying All The (<?php echo $numb ?>) Orders</h2>
             </center>
         </div>
-        <div class="container filledcont">
-            <table class="tablem" style="font-size: 20px;" id="disp_ord">
+        <div class="container filledcont"  style="width:90%">
+            <table class="table table-striped" style="font-size: 20px;width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;" id="disp_ord">
             
                 <?php disp_ord($res_orders,$con); ?>
             </table>
