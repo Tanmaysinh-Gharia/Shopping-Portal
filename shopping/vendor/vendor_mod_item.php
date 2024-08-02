@@ -103,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['btn'] == 'Modify' )
         $stock = mysqli_real_escape_string($con, $_POST['stock']);
         $id = $_SESSION["id"];
         //Moving File 
-        $target_dir = "C:/xampp/htdocs/Practicals/Innovative/shopping2/shopping/img/";
+        $target_dir = "../img/";
         $target_file = $target_dir . basename($_FILES["image"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));

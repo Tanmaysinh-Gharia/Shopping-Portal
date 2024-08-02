@@ -139,7 +139,7 @@
             <div class="container">
                 <center>
                     <p>&copy; 2024 Smart Selects. All Rights Reserved.</p>
-                    <p>This website is developed Vaibhav, Kirtan, Tanmay.</p>
+                    <p>This website is developed Tanmaysinh Gharia.</p>
                 </center>
             </div>
         </footer>

@@ -10,7 +10,12 @@ session_start();
         $_SESSION['notify'] = "Captcha Invalid";
     }   
     $email = $_POST['email'];
-
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+    {
+        $_SESSION['notify'] = "Enter valid email address...! ";
+        header("location: login.php");
+        die();
+    }
     // // echo $email . "and ". $password_admin;
     $type_o_user = $_POST['type_o_user'];
     $name = $_POST['name'];

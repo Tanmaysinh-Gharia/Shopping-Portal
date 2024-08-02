@@ -13,7 +13,13 @@ session_start();
     $password=md5($_POST['password']);
 
     $email = $_POST['email'];
-    // // echo $email . "and ". $password_admin;
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+    {
+        $_SESSION['notify'] = "Enter valid email address...! ";
+        header("location: login.php");
+        die();
+    }
+
     $authentication_query="SELECT id,type,status FROM users WHERE email='$email' and password='$password'";
     $authentication_result=mysqli_query($con,$authentication_query) or die(mysqli_error($con));
     $rows_fetched=mysqli_num_rows($authentication_result);
