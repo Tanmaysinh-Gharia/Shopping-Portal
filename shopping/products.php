@@ -65,6 +65,8 @@ $qry_for_vendor_name = "select * from users where id=";
                             <?php else: ?>
                             <?php if(check_if_added_to_cart($row['id'])): ?>
                             <a href="#" class="btn btn-block btn-success disabled" style="color: black; font-size:20px;width:80%;margin:auto" >Added to cart</a>
+                            <?php elseif ($row['stock'] <= 0) : ?>
+                            <a href="#" class="btn btn-block btn-secondary disabled" style="color: black; font-size:20px;width:80%;margin:auto" >Out of Stock</a>
                             <?php else: ?>
                             <a href="cart_add.php?id=<?php echo $row['id']; ?>" class="btn btn-block btn-warning" style="color: black; font-size:20px;width:80%;margin:auto" > <span class="glyphicon glyphicon-shopping-cart"></span> Add to cart</a>
                             <?php endif; ?>

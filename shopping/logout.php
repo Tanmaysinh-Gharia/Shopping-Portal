@@ -42,7 +42,7 @@
     <div class="container">
         <div class="text-center">
             <p>&copy; 2024 Smart Selects. All Rights Reserved.</p>
-            <p>This website is developed by Tanmay.</p>
+            <p>This website is developed by Tanmaysinh Gharia.</p>
         </div>
     </div>
 </footer>

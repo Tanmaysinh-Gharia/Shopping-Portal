@@ -7,7 +7,7 @@ if (!isset($_SESSION['email'])) {
 }
 check_notifications();
 $user_id = $_SESSION['id'];
-$user_products_query = "SELECT it.id, it.name, it.price, ut.quantity 
+$user_products_query = "SELECT it.id, it.name, it.price, ut.quantity,it.stock
                         FROM users_items ut 
                         INNER JOIN items it ON it.id = ut.item_id 
                         WHERE ut.user_id='$user_id';";
@@ -65,18 +65,28 @@ if ($no_of_user_products == 0) {
             $item_ids= "";
             $vend_ids= "";
             $qtys = "";
+            $flg = true;
             while ($row = mysqli_fetch_array($user_products_result)) {
                 $curr_id = $row['id'];
                 ?>
                 <tr>
                     <td><?php echo $counter; ?></td>
-                    <td><?php echo $row['name']; ?></td>
+                    <td>
+                        <?php echo $row['name']; ?>
+                        <?php if ($row['stock']<= 0 or $row['quantity'] > $row['stock']):?>
+                    <button class='btn btn-danger' style='color:white;'> Out Of Stock | Available:<?php echo $row['stock'];$flg = false; ?></button>
+                    <?php endif; ?>
+                    </td>
                     <td><?php echo $row['price']; ?></td>
                     <td>
                         <form action="update_quantity.php" method="POST">
                             <input type="hidden" name="item_id" value="<?php echo $curr_id; ?>">
-                            <input type="number" name="quantity" value="<?php echo $row['quantity']; ?>" min="1">
+                            <input type="number" name="quantity" value="<?php echo $row['quantity']; ?>" min="1" max='<?php echo $row['stock'];?>'>
+                            <?php if($flg == true): ?>
                             <button type="submit" class="btn btn-primary">Update</button>
+                            <?php else: ?>
+                            <button type="" class="btn btn-secondary disabled">Update</button>
+                            <?php endif; ?>
                         </form>
                     </td>
                     <td><?php echo $row['price'] * $row['quantity']; ?></td>
@@ -84,6 +94,7 @@ if ($no_of_user_products == 0) {
                 </tr>
                 <?php
                 $counter++;
+                $flg = True;
             }
             ?>
             <tr>
@@ -105,7 +116,7 @@ if ($no_of_user_products == 0) {
     <div class="container">
         <div class="text-center">
             <p>&copy; 2024 Smart Selects. All Rights Reserved.</p>
-            <p>This website is developed by Tanmay.</p>
+            <p>This website is developed by Tanmaysinh Gharia.</p>
         </div>
     </div>
 </footer>
