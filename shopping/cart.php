@@ -103,9 +103,15 @@ if ($no_of_user_products == 0) {
                 <td></td>
                 <td></td>
                 <td>Rs <?php echo $sum; ?>/-</td>
-                <td><a href="success.php" class="btn btn-success">
+                <?php if($counter > 1): ?>
+                    <td><a href="success.php" class="btn btn-success">
+                        <b>
+        Confirm Order</b></a>
+        <?php else: ?>
+            <td><a href="success.php" class="btn btn-success disabled" >
                 <b>
-                Confirm Order</b></a>
+No Items in the Cart</b></a>
+            <?php endif;?>
                 </td>
             </tr>
             </tbody>
