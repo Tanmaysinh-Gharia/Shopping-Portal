@@ -63,7 +63,7 @@
                 
                 //Updating orders
                 $qry_place_ord= "INSERT INTO orders(order_date,user_id,sm_id) 
-                VALUES(CURDATE(),$user_id,$sm_id);";
+                VALUES(NOW(),$user_id,$sm_id);";
                 $confirm_query_result=mysqli_query($con,$qry_place_ord) or die(mysqli_error($con));
                 $order_id = mysqli_insert_id($con);
                 
